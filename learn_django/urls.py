@@ -14,13 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from app1 import views
+from app2 import views as views2
+
 # from app1.views import hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
     # path('hello/', hello),
-    path('now/', views.current_datetime)
+    path('time/', views.current_datetime),
+    # path('time/plus/<int:offset>/', views.hours_ahead),
+    re_path('^time/plus/(\d{1,2})/$', views.hours_ahead),
+    # -----------app2-----------
+    path('hello2/', views2.hello),
 ]

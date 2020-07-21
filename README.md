@@ -1,5 +1,6 @@
 # learn_django
-**本项目主要为了回忆Django的基础用法，参考自django文档的中文教程**
+**本项目主要为了回忆Django的基础用法，参考自Django book 2.0 的中文教程**
+
 python3.7
 django3.0
 
