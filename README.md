@@ -43,3 +43,9 @@ python manage.py loaddata appname.json
 python manage.py dbshell
 ```
 ## 20200721基础用法
+有参数时url的新旧写法
+```python
+path('time/plus/<int:offset>/', views.hours_ahead),
+#在django2之后，可以引入re_path来使用老的写法
+re_path('^time/plus/(\d{1,2})/$', views.hours_ahead),
+```
