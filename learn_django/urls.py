@@ -25,6 +25,7 @@ urlpatterns = [
     path('hello/', views.hello),
     # path('hello/', hello),
     path('time/', views.current_datetime),
+    path('time2/', views.current_datetime2),
     # path('time/plus/<int:offset>/', views.hours_ahead),
     re_path('^time/plus/(\d{1,2})/$', views.hours_ahead),
     # -----------app2-----------
