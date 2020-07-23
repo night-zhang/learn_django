@@ -27,6 +27,7 @@ urlpatterns = [
     path('time/', views.current_datetime),
     path('time2/', views.current_datetime2),
     # path('time/plus/<int:offset>/', views.hours_ahead),
+    # django1的写法
     re_path('^time/plus/(\d{1,2})/$', views.hours_ahead),
     # -----------app2-----------
     path('hello2/', views2.hello),
