@@ -164,7 +164,7 @@ example：
 <p>It is now {{ current_date }}.</p>
 {% endblock %}
 ```
-# 20200724 数据过滤+
+# 20200724 数据过滤+站点管理
 ```
 # `` filter()`` 函数返回一个记录集，这个记录集是一个列表
 # 相当于select where 
@@ -191,4 +191,16 @@ Publisher.objects.order_by("name")order_by("name")
 >>> p = Publisher.objects.get(name="O'Reilly")
 >>> p.delete()
 ```
-
+修改中文和时区
+```python
+LANGUAGE_CODE = 'zh-hans'
+TIME_ZONE = 'Asia/Shanghai'
+```
+admin界面显示其他表
+```python
+# 先在admin.py中注册表
+# Register your models here.
+admin.site.register(Publisher)
+admin.site.register(Author)
+admin.site.register(Book)
+```

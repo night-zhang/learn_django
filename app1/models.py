@@ -18,6 +18,9 @@ class Publisher(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = u"出版社名字"  # 表名改成中文名
+
 
 class Author(models.Model):
     first_name = models.CharField(max_length=30)
