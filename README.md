@@ -164,3 +164,31 @@ example：
 <p>It is now {{ current_date }}.</p>
 {% endblock %}
 ```
+# 20200724 数据过滤+
+```
+# `` filter()`` 函数返回一个记录集，这个记录集是一个列表
+# 相当于select where 
+Publisher.objects.filter(name='Apress')
+[<Publisher: Apress>]
+
+# 相当于like
+Publisher.objects.filter(name__contains="press")
+[<Publisher: Apress>]
+
+# 其他的一些查找类型有： icontains(大小写无关的LIKE),startswith和endswith, 还有range(SQLBETWEEN查询）
+
+# `` get()``获取单个对象
+
+# 排序
+Publisher.objects.order_by("name")order_by("name")
+
+# 更新对象
+>>> p = Publisher.objects.get(name='Apress')
+>>> p.name = 'Apress Publishing'
+>>> p.save()
+
+# 删除对象
+>>> p = Publisher.objects.get(name="O'Reilly")
+>>> p.delete()
+```
+
