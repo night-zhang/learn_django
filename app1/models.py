@@ -20,6 +20,7 @@ class Publisher(models.Model):
 
     class Meta:
         verbose_name = u"出版社名字"  # 表名改成中文名
+        verbose_name_plural = verbose_name  # 去掉显示时后面的s
 
 
 class Author(models.Model):
