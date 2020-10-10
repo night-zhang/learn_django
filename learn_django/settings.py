@@ -24,7 +24,7 @@ SECRET_KEY = 'r_l8lk=z691jq*p$n^c%6ic01_c4%y&rj(p$(2bty4(1c_=3gt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["140.143.137.193"]
 
 # Application definition
 # 创建新的app需要这里加一下
